@@ -1,0 +1,104 @@
+\documentclass[a4paper, oneside, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{mdframed}
+\usepackage{acronym}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{capt-of}
+\usepackage{array}
+\usepackage{makecell}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set margins for double-sided printing
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=1.5cm, head=15pt]{geometry} 
+\usepackage{setspace}
+\onehalfspacing
+% set headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textsc{}{\leftmark}}
+\fancyhead[R]{\thesisauthor}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subsubsections and beyond will not appear in the table of contents
+\setcounter{tocdepth}{2}
+% set APA citation style
+\usepackage{apacite}
+\usepackage[numbib,notlof,notlot,nottoc]{tocbibind}
+\pagenumbering{gobble}
+%\usepackage[document]{ragged2e}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%THESIS Parameters 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{ Wen kann funktionale Programmierung dabei unterstützen, Entwicklungskompetenzen zu erwerben? }
+\newcommand{\thesisdate}{TODO}
+\newcommand{\thesisauthor}{Anouk Martinez Wieczorek}
+\newcommand{\studentID}{11154860}
+\newcommand{\thesistype}{Bachelorarbeit}
+\newcommand{\supervisor}{Prof. Dr. Stefan Bente}
+\newcommand{\cosupervisor}{Prof. Dr. Hoai Viet Nguyen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TITLE PAGE (Pre-defined, just change parameters above)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Template/Title.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SOOA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Template/SOOA.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TOC,TOF,TOT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{Roman}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%MAIN PART
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{FlushLeft}
+% SEC 1
+\input{./Sections/Section_1}
+% SEC 2
+\input{./Sections/Section_2}
+% SEC 3
+\input{./Sections/Section_3}
+% SEC 4
+\input{./Sections/Section_4}
+% SEC 5
+\input{./Sections/Section_5}
+
+%\end{FlushLeft}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%APPENDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\renewcommand*{\thesection}{\Alph{section}}\textbf{}
+% APPENDIX A
+%\input{Appendices/Appendix_1.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\renewcommand*{\thesection}{}\textbf{}
+\bibliographystyle{apacite}
+\bibliography{Bibliography.bib}
+\end{document} 
