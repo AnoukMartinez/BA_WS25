@@ -1,0 +1,8 @@
+*.aux
+*.lof
+*.log
+*.out
+*.toc
+
+# Kann wieder weg, sobald die finale(n) Version(en) im Produktion sind
+*.pdf 
