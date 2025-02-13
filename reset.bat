@@ -1,8 +1,20 @@
 @echo off
 setlocal
 
+:: Run pdflatex on Main.tex
+echo Running pdflatex on Main.tex...
+pdflatex Main.tex
+bibtex Main
+pdflatex Main.tex
+pdflatex Main.tex
+
+:: Wait for user input
+echo.
+echo Press ENTER to delete temporary files...
+pause >nul
+
 :: Define the file extensions to delete
-set EXTENSIONS=*.aux *.lof *.log *.out *.toc *.pdf
+set EXTENSIONS=*.aux *.lof *.log *.out *.toc *.pdf *.bbl *.blg
 set FILES_DELETED=0
 
 for %%E in (%EXTENSIONS%) do (
