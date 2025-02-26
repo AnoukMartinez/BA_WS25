@@ -45,6 +45,34 @@ Es wird zudem argumentiert, dass es noch weitere Aspekte gibt, die für CT allge
 \subsection{Lerntypen}
 Ebenso wie im Feld des CT, gibt es für Lerntypen kein allgemein akzeptiertes Modell. Allerdings gibt es einige Theorien die häufiger, besonders im Kontext von CS angewandt wird. Das bewährteste Modell hierbei ist das Felder-Silverman Lerntyp Modell (FSLSM). Das Modell wird oft als Grundlage für Studien im Feld verwendet .
 
-\subsection{Übersicht bekannter Paradigmen}
-
 \subsection{Aktuelle Lerninhalte an Universitäten und Hochschulen}
+
+\subsubsection{Übersicht bekannter Paradigmen}
+Um die häufig behandelten Paradigmen untersuchen zu können, muss zuerst definiert werden, welche Kategorien es gibt. Hierzu werden die vier am häufigsten verbreiteten Paradigmen betrachtet \cite{normark}.
+
+\begin{description}
+    \item[Imperative Programmierung] Abfolge von Kommandos, die den Zustand des Programmes inkrementell ändern. Beschreibungen von Aktionen in einer geregelten Abfolge, etwa wie es bei einer Anleitung oder einem Rezept der Fall wäre.
+    \item[Funktionale Programmierung] Orientierung an Funktionen aus mathematischer Sicht. Produzierte Werte sind unveränderlich, und das Programm hat keinen Zustand. Alle Operationen im Programm werden ausschließlich von Funktionen gehandhabt, und Funktionen werden als Objekte erster Klasse behandelt, so wie die Daten im Programm.
+    \item[Logische Programmierung] Basiert auf Wahrheiten (Axiomen), Schlussregeln und Abfragen basierend auf sogenannten "Fakten".
+    \item[Objektorientierte Programmierung] Modellierung von echten Objekten im Code. Daten und Funktionen werden in Objekten gekapselt, die wiederum in Klassen kategorisiert werden können. Klassen können in einer Hierarchie, etwa durch Konzepte wie Vererbung, organisiert werden.
+\end{description}
+
+Umfragen unter Entwicklern der letzten Jahre hat gezeigt, dass objektorientierte Sprachen noch immer zu den am meisten verwendeten zählen, sowohl im Berufsleben, als auch unter Lernenden \cite{stackoverflow}. Die Frage, die in diesem Abschnitt betrachtet werden soll, ist, ob auch an deutschen Universitäten noch vermehrt objektorientierte Paradigmen gelehrt werden.
+Die Ergebnisse der Untersuchung werden anschließend im Kontext von Abbruchquoten der Informatik untersucht \cite{dhzw}.
+
+\subsubsection{Untersuchung Curricula}
+\footnote{Eine detaillierte Beschreibung des Vorgehen befindet sich im Anhang der Arbeit.}
+Um zu untersuchen, wie verbreitet funktionale Programmierung momentan in Hochschulcurricula ist, wurden 121 Informatik Studiengänge an verschiedenen Universitäten und Hochschulen in Deutschland untersucht.
+Hierbei ergab sich, dass die Mehrheit von Einführkursen der Informatik objektorientierte Programmierparadigmen behandeln.
+
+\begin{figure}[h!]
+    \centering
+    \input{Figures/figCurricula}
+    \caption{Zahl der Programmiersprachen in Einführungskursen der Informatik}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \input{Figures/figParadigms}
+    \caption{Zahl der Paradigmen in Einführungskursen der Informatik}
+\end{figure}
