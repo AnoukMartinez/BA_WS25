@@ -4,39 +4,48 @@
 
 \subsection{Vorgehen bei der Untersuchung der Curricula}
 Um auszuarbeiten, wie die aktuelle Situation an deutschen Hochschulen und Universitäten ist, wurde der Hochschulkompass der Hochschulrektorenkonferenz verwendet \cite{hochschulkompass}.
-Auf der Webseite wurden Studiengänge der Informatik gesucht, und nach folgenden Kriterien sortiert:
+Auf der Webseite wurden Studiengänge der Informatik gesucht, und nach folgenden Kriterien mithilfe der Filterfunktion der Webseite sortiert:
 
 \begin{itemize}
     \item Abschluss Bachelor/Bakkalaureus (Da Programmieranfänger betrachtet werden sollen, macht es im Kontext keinen Sinn, weiterführende Studiengänge oder Masterprogramme zu berücksichtigen)
-    \item Studientyp Grundständig (Siehe Abschluss)
+    \item Studientyp Grundständig (Siehe Abschluss Bachelor/Bakkalaureus)
     \item Fachsuche Informatik (Speziellere Studiengänge wie Bioinformatik und Wirtschaftsinformatik wurden ausgeschlossen, um Überschneidungen an den Schulen zu meiden. Es wurde immer ein Studiengang pro Institution untersucht, der sich möglichst nah an der Allgemeinen Informatik kategorisieren lässt)
     \item Studienfeld Angewandte Informatik oder Informatik (Siehe Fachsuche)
     \item Studienformen Vollzeitstudium (Ein weiteres Kriterium, um Überschneidungen zu meiden und die Studiengänge weiter auszusortieren)
     \item ohne Lehramt (Wurde in den Filtern aussortiert, da die Lerninhalte sowohl Informatik als auch Erziehungswissenschaften umfasst, und somit nicht im Fokus der Arbeit liegen)
 \end{itemize}
 
-Nach der Anwendung der Filter wurden noch insgesamt 425 Treffer angezeigt, die weiterhin auf 121 Ergebnisse reduziert werden konnten. Folgende Ausschlusskriterien wurden verwendet, um Studiengänge auszusortieren. Wenn eins der Kriterien zutrifft, wird der Studiengang aussortiert.
+Nach der Anwendung der Filter wurden noch insgesamt 425 Treffer angezeigt, die erst im späterem Verlauf der Arbeit weiter reduziert wurden (siehe \nameref{sec:sorting}).
+
+\subsubsection{Zeit Management}\label{sec:time_management}
+Aufgrund dessen, dass die Curricula Analyse nicht der Schwerpunkt der Bachelorarbeit sein sollte, musste abgewägt werden, wie viel Zeit in das Thema investiert werden soll.
+Hierbei wurden mehrere Risiken gesehen. Zum einem ist es möglich, dass man durch Internetrecherche alleine nicht erschließen kann, welche Inhalte ein Modul hat.
+Zum anderen ist, das größere Risiko wahrscheinlich, der Zeitfaktor. Es ist ungewiss, wie lange es dauert, jedes Modul zu untersuchen, da jede Institution ihre Informationen anders sortiert, bereitsstellt und handhabt.
+
+Um die Zeit in einem realistischen Rahmen zu halten, wurde in Erwägung gezogen, einen Zeitraum festzulegen, in dem so viele Studiengänge wie möglich betrachtet werden, und diese anschließend die Forschungsmenge darstellen. Dieser Zeitraum könnte etwa auf 2 Arbeitstage fallen. Auch abgewägt wurde, die Studiengänge nach Anzahle der Studierenden zu sortieren, und die 50 am meisten besuchtesten Insititutionen zu betrachten.
+
+Es wurde allerdings ebenfalls notiert, dass das ungewisseste Kriterium hier die Zeit war, die benötigt wird, um einen Studiengang zu untersuchen. Möglicherweise müssen die Methoden zur Reduktion der Zeit gar nicht angewandt werden, wenn sich die Risiken nicht erfüllen. Zunächst wurde daher versucht, abzuwägen, wie lange die Dauer der Analyse prinzipiell grob einzuschätzen war.
+In einer isolierten Probe wurden fünf zufällige Universitäten betrachtet (In diesem Fall die ersten fünf Suchergebnisse des Hochschulkompasses, die HS Furtwangen, die Ruhruniversität Bochum, die Hochschule Fulda, die Friedrich-Schiller-Universität Jena, und die Hochschule Konstanz).
+Hierbei dauerte es etwa 10 Minuten, um entsprechende Informationen über alle 5 Studiengänge zu erlangen.
+Bei den 121 verbleibenden Informatik Studiengängen wurde die Zeitdauer also grob auf 4 Stunden eingeschätzt, ein realistischer Zeitraum zur Sammlung der Daten. Mit diesen neuen Informationen wurden die Methoden zur Zeitreduktion wieder verworfen.
+
+Letztendlich wurde für die Analyse doch ein ganzer Arbeitstag benötigt, aber die reduzierte Menge der Studiengänge durch die Filter war bereits genügend, um die Daten in einem angemessenem Zeitraum zu sammeln.
+
+\subsubsection{Untersuchung der Daten}\label{sec:sorting}
+Bei der Analyse der Curricula wurde systematisch vorgegangen. Mithilfe eines Webscrapers wurden alle nötigen Informationen als JSON extrahiert, und in einer Excel Tabelle sortiert.
+Es wurde festgestellt, dass die Filterfunktion des Hochschulkompasses nicht ausreichend war, um die Datenmenge zu reduzieren. Die Studiengänge wurden daher noch einmal manuell aussortiert, nach weiteren Kriterien.
 
 \begin{itemize}
-    \item Kein Allgemeiner Informatikstudiengang
+    \item Kein Allgemeiner Informatikstudiengang (z.B Bioinformatik oder Wirtschaftsinformatik)
     \item Zweitfach oder Nebenfach Informatik
     \item Teilzeitstudium
     \item Mehrere Studienorte für einen Studiengang (Hierbei sind die angebotenen Module teils nicht eindeutig zuordbar)
     \item Doppelte Studiengänge für eine Institution (Etwa wenn sowohl Angewandte, als auch Allgemeine Informatik angeboten wird. Hierbei wurde sich immer für den Allgemeineren Studiengang entschieden. Zwischen internationalen und deutschen Studiengängen wurde immer der deutsche Studiengang gewählt)
 \end{itemize}
 
-Aufgrund dessen, dass die Curricula Analyse nicht der Schwerpunkt der Bachelorarbeit sein sollte, musste abgewägt werden, wie viel Zeit in das Thema investiert werden soll.
-Hierbei wurden mehrere Risiken gesehen. Zum einem ist es möglich, dass man durch Internetrecherche alleine nicht erschließen kann, welche Inhalte ein Modul hat. Zum anderen ist, das größere Risiko wahrscheinlich, der Zeitfaktor. Es ist ungewiss, wie lange es dauert, jedes Modul zu untersuchen, da jede Institution ihre Informationen anders sortiert, bereitsstellt und handhabt.
+Für die meisten Studiengänge ließen sich die nötigen Informationen in sehr kurzen Zeiträumen mit einer Suche nach dem Studienverlaufsplan, sowie dem Modulhandbuch für die Informatik finden.
+Hierbei wurde der Studienverlaufsplan genutzt, um herauszufinden, welcher Kurs als Einführung in die Programmierung im ersten Semester dient, und das Modulhandbuch, um zu extrahieren welche Programmierparadigmen und Sprachen im Kurs verwendet werden.
 
-Für Methodiken, um die Menge an Daten in einem realistischen Zeitraum zu bearbeiten, wurden folgende in Erwägung gezogen.
-\begin{itemize}
-    \item Ein festgelegter Zeitraum, in dem die Daten betrachtet werden, und nur die, die in dem Zeitraum machbar sind.
-    \item Ranking der Hochschulen nach Anzahl der Studierenden, und Betrachtung der 50 größten Insititutionen in Reihenfolge.
-\end{itemize}
+Nicht alle Module listeten die benötigten Informationen. Es wird in der Analyse grundsätzlich unterschieden zwischen zwei Fällen. Zum einem, Studiengänge, die zwar ein Modulhandbuch zur Verfügung stellten, dieses aber nicht explizit spezifiziert welche Paradigmen und Spachen verwendet werden (Markiert als "Unspezifisch"). Zum Anderem gibt es noch den Fall, dass kein Modulhandbuch öffentlich zur Verfügung steht. Dies kann etwa der Fall sein, wenn die Insititution Informationen nur auf Anfrage herausgibt, oder das Modulhandbuch einfach nicht aufzufinden war. Es wurde davon abgesehen, die Insititutionen zu kontaktieren, um einen neuen ungewissen Zeitfaktor zu vermeiden. Die Studiengänge ohne Modulhandbuch wurden leer gelassen, und sind in der Excel rot markiert. In der Grafik zu darstellung der Ergebnisse sind diese Datensätze in "Keine Infos" kategorisiert.
 
-Es wurde notiert, dass das ungewisseste Kriterium hier die Zeit war, die benötigt wird, um einen Studiengang zu untersuchen. In einer isolierten Probe wurden fünf zufällige Universitäten betrachtet (In diesem Fall die ersten fünf Suchergebnisse des Hochschulkompasses, die HS Furtwangen, die Ruhruniversität Bochum, die Hochschule Fulda, die Friedrich-Schiller-Universität Jena, und die Hochschule Konstanz Technik, Wirtschaft und Gestaltung). Hierbei dauerte es etwa 10 Minuten, um entsprechende Informationen über alle 5 Studiengänge zu erlangen.
-Bei den 121 verbleibenden Informatik Studiengängen wurde die Zeitdauer also grob auf 4 Stunden eingeschätzt, ein realistischer Zeitraum zur Sammlung der Daten.
-
-\subsubsection{Untersuchung der Daten}
-Bei der Analyse der Curricula wurde systematisch vorgegangen. Mithilfe eines Webscrapers wurden alle nötigen Informationen als JSON extrahiert, und in einer Excel Tabelle untersucht. So geschah auch die oben erwähnte Aussortierung der Studiengänge, die nicht auf die Kriterien zutreffen.
-% Die Excel Tabelle mit den extrahierten Daten lässt sich im Repository der Bachelorarbeit finden \cite{repo_xlsx}.
+% Die Excel Tabelle mit den extrahierten Daten lässt sich im Repository der Bachelorarbeit finden \cite{repoxlsx}.
