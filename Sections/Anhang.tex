@@ -48,4 +48,39 @@ Hierbei wurde der Studienverlaufsplan genutzt, um herauszufinden, welcher Kurs a
 
 Nicht alle Module listeten die benötigten Informationen. Es wird in der Analyse grundsätzlich unterschieden zwischen zwei Fällen. Zum einem, Studiengänge, die zwar ein Modulhandbuch zur Verfügung stellten, dieses aber nicht explizit spezifiziert welche Paradigmen und Spachen verwendet werden (Markiert als "Unspezifisch"). Zum Anderem gibt es noch den Fall, dass kein Modulhandbuch öffentlich zur Verfügung steht. Dies kann etwa der Fall sein, wenn die Insititution Informationen nur auf Anfrage herausgibt, oder das Modulhandbuch einfach nicht aufzufinden war. Es wurde davon abgesehen, die Insititutionen zu kontaktieren, um einen neuen ungewissen Zeitfaktor zu vermeiden. Die Studiengänge ohne Modulhandbuch wurden leer gelassen, und sind in der Excel rot markiert. In der Grafik zu darstellung der Ergebnisse sind diese Datensätze in "Keine Infos" kategorisiert.
 
-% Die Excel Tabelle mit den extrahierten Daten lässt sich im Repository der Bachelorarbeit finden \cite{repoxlsx}.
+Die Excel Tabelle mit den extrahierten Daten lässt sich im Repository der Bachelorarbeit finden \cite{repoxlsx}.
+
+\subsection{Auswahl des Problemes im Praxisteil}
+Die Auswahl des Programmierproblems in Abschnitt 4 der Arbeit erfolgte an mehreren Kriterien. Zum einem sollte ein relativ einfaches Problem gewählt werden, welches weniger zu innovativer Lösungsfindung anregen sollte, als mehr nur zur Demonstration eines Zweckes dienen sollte.
+Zunächst wurde sich hierbei entschieden, einen Algorithmus zur automatischen Lösung und Erstellung eines Sudoku zu schreiben.
+Bei einem Sudoku handelt es sich um ein klassisches Rätsel, bei dem auf einem 9x9 großem Feld in jeder Zeile, Spalte, und in jeder 3x3 großen Box jede Zahl von 1 bis 9 nur ein mal vorkommen darf.
+
+Das Problem eignete sich zum Untersuchen und Lernen von funktionaler Programmierung, da alle wichtigsten Aspekte von Funktionaler Programmierung benötigt wurden, um das Problem im Paradigma erfolgreich umzusetzen (Rekursion, Funktionen Höherer Ordnung, Komposition, Unveränderlichkeit). Es wurden ebenfalls alle CT Aspekte ausreichend abgedeckt.
+
+\begin{description}
+    \item[Dekomposition] Herunterbrechen in Teilprobleme. Beispielsweise, Validierung des Sudoku, dann Untersuchen der Spalten, Zeilen und Boxen separat.
+    \item[Abstraktion] Rätsel in Datenstrukturen umwandeln. Beispielsweise, Überlegunge, wie das Brett und die Felder am Besten im Code abgebildet werden können.
+    \item[Algorithmen] Zur Implementierung des Solvers.
+    \item[Debugging] Wie kann das Sudoku effizient gelöst werden? Evaluierung der Lösung, und Erkennen von Fehlerpotential in den einzelnen Unterfunktionen.
+\end{description}
+
+Letztendlich wurde sich allerdings doch für ein anderes Problem entschieden, da Sorgen hinsichtlich der Umsetzbarkeit im gegebenen Zeitrahmen bestanden.
+Es wurde sich letztendlich für die Türme von Hanoi entschieden, aufgrund einer Empfehlung des betreuuenden Prüfers, sowie das Vorkommen der Aufgabe im ersten Aufgebenblatt des verwendeten Kurses, um Haskell zu lernen. % TODO Wow Umformulierung bitte
+Das Problem vetritt ebenfalls wichtige Aspekte von FP, vor allem das Konzept des Backtrackings. Auch die CT Aspekte waren wiederum erkennbar vetreten, was letztendlich zur Entscheidung führte.
+
+\begin{description}
+    \item[Dekomposition] Überlegung welche Teilprobleme es gibt. Ein bisschen weniger offensichtlich als beim Sudoku Solver, aber beispielsweise die Validierung der Züge und die tatsächliche Durchführung sind zwei verschiedene Verantwortungen.
+    \item[Abstraktion] Überlegung, wie die Pins und Holzplatten abgebildet werden können. Wie wird deutlich, welche Platte zu welchem Pin gehört? Wie wird die Größe der Platten deutlich? Hierbei können beispielsweise Integer verwendet werden.
+    \item[Algorithmen] Zur tatsächlichen Implementierung des Problems.
+    \item[Debugging] Ebenso wie der Sudoku Solver gibt es hier mehrere Lösungen, die abgewägt werden können.
+\end{description}
+
+\subsection{Vorgehen im Praxisteil}
+Der Autor hatte vor der Bachelorarbeit keine großen Vorkenntnisse in FP, und keine Erfahrungen mit Haskell. Um die Sprache zu lernen, wurde den offiziellen Empfehlungen der Haskell Dokumentation gefolgt. Hierbei war das sogenannte REPL (read-eval-print-loop) besonders hilfreich. Die interaktive Programmierumgebung nimmt einzelne Nutzerinputs, evaluiert diese und gibt den Output an den Nutzer zurück. Im Kontext der CIS 194 Vorlesung wurde das REPL ebenfalls zur Einführung in Haskell Variablen verwendet.
+Anfänger können so schnell und barrierelos mit der Syntax und den Ausdrücken in Haskell experimentieren, und so "hands on" erste Programmiererfahrungen machen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/Anhang/ghci}
+    \caption{Verwendung von GHCi in der Windows Powershell}
+\end{figure}

@@ -2,18 +2,21 @@
 \section{Praxis}
 \label{sec:practice}
 
-Kurze Einleitung in den Sinn und Hintergrund des Praxisteiles
+Um die Schlussfolgerungen aus dem Forschungsteil weiter zu untersuchen, wurde sich dazu entschieden, die Vor- und Nachteile der Lerntypen in einem praktischen Selbstexperiment zu untersuchen.
+Hierzu werden die Hänge in den einzelnen Lerndimensionen des Autors untersucht. Anschließend wird ein einfacher Algorithmus in einer funktionalen Programmiersprache umgesetzt. Es wurde sich in diesem Fall für Haskell entschieden, da es die meistverwendete funktionale Programmiersprache in Einsteiger Kursen im Bereich Informatik ist (siehe \nameref{sec:curriculares}).
+Als Problem wurde "Türme von Hanoi" gewählt, ein klassisches Problem mit Backtracking.
+Für das Problem wurde sich entschieden, da alle Aspekte von Computational Thinking (CT) gut vertreten sind, und wichtige Aspekte des funktionalen Programmierens wie Backtracking und Rekursion für die Lösung benötigt werden.
+Das Problem ist zudem Teil des Kurses CIS 194 \cite{cis194} der University of Pennsylvania, der in der offiziellen Haskell Dokumentation empfohlen wird \cite{haskelldoc}. Der Kurs wurde im Rahmen der Bachelorarbeit verwendet, um die Grundkonzepte von Haskell zu erlernen, und durch praktische Übungen anzuwenden.
+
+Weitere Erläuterungen zu der Art des Problemes folgen in Abschnitt \nameref{sec:problemdesc}.
 
 \subsection{Lerntypenanalyse}
 Um das Selbstexperiment in Verbindung mit den Vor- und Nachteilen der Lerntypen in den verschiedenen Feldern setzen zu können, musste zunächst eine eigene Lerntypen Analyse durchgeführt werden.
-Hierzu wurde der "Index of Learning Styles Questionnaire" Fragebogen verwendet \cite{ils_questionnaire}, ein Online Tool welches insgesamt 44 Fragen stellt, und dann auf Basis der Antworten sowohl die Lerntypen eines Individuums einschätzen kann. Die Lerntypen, die als Gegensatzpaare definiert sind, befinden sich auf einer 2 Dimensionalen Skala, die einschätzen soll, wie ausgeprägt der Hang zu einem Aspekt ist. Verwendet wurde hierbei die PDF Version des Fragebogens. Ein Wert von 1 bis 3 entspricht einer ausgewogenen Balance beider Aspekte der Dimension. Ein Wert von 5 bis 7 entspricht einem mäßigem Hand zu einem Aspekt. Ein Wert von 9 bis 11 entspricht einer starken Präferenz eines Lernstiles in der Dimension.
+Hierzu wurde der "Index of Learning Styles Questionnaire" Fragebogen verwendet \cite{ils_questionnaire}, ein Online Tool welches insgesamt 44 Fragen stellt, und dann auf Basis der Antworten die Lerntypen eines Individuums einschätzen kann. Die Lerntypen, die als Gegensatzpaare definiert sind, befinden sich auf einer 2 Dimensionalen Skala, die einschätzen soll, wie ausgeprägt der Hang zu einem Aspekt ist. Ein Wert von 1 bis 3 entspricht einer ausgewogenen Balance beider Aspekte der Dimension. Ein Wert von 5 bis 7 entspricht einem mäßigem Hand zu einem Aspekt. Ein Wert von 9 bis 11 entspricht einer starken Präferenz eines Lernstiles in der Dimension.
 Die Verlässlichkeit dieses Fragebogens wurde mehrmals, sowohl von den ursprünglichen Autoren des Lernmodelles \cite{felder2005}, als auch von anderen Quellen \cite{zywno}, geprüft und bestätigt.
 
 \subsubsection{Ergebnisse der persönlichen Evaluierung}
 Die Fragen des ILS Fragebogens wurden in einer zufälligen Reihenfolge beantwortet, um zu vermeiden, dass bereits vorab klar ist, welche Frage welcher Typendimension korrespondiert. Dies ist möglich, da der Test so aufgebaut ist, dass jeweils ein Frageblock von 4 Fragen jede Dimension behandelt. Die erste Frage beispielsweise geht in die Wertung der Aktiv/Reflektiven Dimension ein, die 5 Frage beschäftigt sich wieder mit der Dimension, und die 9 Frage ebenfalls.
-
-Die Fragen des ILS-Fragebogens wurden in zufälliger Reihenfolge beantwortet, um zu verhindern, dass bereits im Voraus offensichtlich ist, welche Frage welcher Dimension zugeordnet ist.
-Dies ist möglich, da der Test so konzipiert ist, dass jede Dimension in Blöcken von vier Fragen abgedeckt wird. Beispielsweise fließt die erste Frage in die Bewertung der Aktiv/Reflexiv-Dimension ein, die fünfte Frage ebenfalls und ebenso die neunte.
 
 Die Ergebnisse des Fragebogens lauten wie folgt.
 
@@ -32,16 +35,19 @@ Demnach lässt sich schließen dass der Autor Hänge zu folgenden Dimensionen au
     \item Ein ausgewogenes Verhältnis der Sequentiellen/Globalen Dimension
 \end{itemize}
 
-% Problem as I am writing this ist Section 3 noch nicht so ganz fertig und das hier könnte daher noch anders ausfallen
-
-Die Hänge der einzelnen Lerntypen wird im praktischen Versuch anschließend in Bezugzu den Vor- und Nachteilen für das Erlernen und Anwenden der Computational Thinking Aspekte und der verschiedenen Paradigmen gesetzt.
-Theoretisch sollte es in folgenden Bereichen Vor- und Nachteile geben.
+Die Hänge der einzelnen Lerntypen wird im praktischen Versuch anschließend in Bezugzu den Vor- und Nachteilen für das Erlernen und Anwenden der CT Aspekte und der verschiedenen Paradigmen gesetzt.
+Theoretisch sollten die Ausprägungen folgende Folgen haben.
 
 \begin{itemize}
-    \item Ein Vorteil beim Anwenden von Abstraktion
-    \item Ein Vorteil im Aspekt des Debuggens, und der Analyse der gefundenen Lösungen
-    \item Ein möglicher Nachteil beim algorithmischen Denken insgesamt
-    \item Kein klarer Vor- oder Nachteil in der Dekomposition, aufgrund eines ausgewogenen Verhältnisses in der sequentiell/globalen Dimension
+    \item Kein besonderer Vor- oder Nachteil beim Debugging in funktionaler Programmierung (FP), und beim Erlernen von Programmieren in Einzelarbeit generell
+    \item Ein Nachteil beim Anwenden von Abstraktion und Algorithmischen Denken, und damit ein Nachteil der Erkennung der Zusammenhänge von FP zu mathematischen Funktionen, sowie das innovative Arbeiten mit einem limitierten Toolset
+    \item Ein möglicher mäßiger Vorteil zur Dekomposition, sowie zur Abstraktion auf Funktionsebene in der FP
+    \item Kein besonderer Vorteil in Dekomposition, sowie der generellen Anwendung von FP in einer sequentiellen Lösungsstrategie
 \end{itemize}
 
-\subsection{Problembeschreibung}
+\subsection{Problembeschreibung}\label{sec:problemdesc}
+Um die aufgestellten Thesen zu prüfen, wurde sich entschieden, eine Programmieraufgabe in einem praktischen Teil zu lösen, und alle Erfahrungen, Schwierigkeiten und Probleme in einer Art "Development Diary" zu dokumentieren.
+Die Türme von Hanoi wurden hier gewählt, weil die Aufgabe in einem Anfängerkurs mit eigener Aufgabenstellung vertreten war \cite{cis194}, sowie alle Aspekte des CT abdeckt.
+
+In dem Problem geht es um drei oder mehr Holzstäbe, um die unterschiedlich große, runde Holzplatten gestapelt sind. Das Ziel der Lösung ist es, die aufsteigend gestapelten Platten vom Turm ganz links hin zum Turm ganz rechts zu transportieren. Hierbei gelten zwei Regeln. Zum einem darf nie mehr als eine Platte gleichzeitig bewegt werden. Außerdem darf sich eine größere Platte niemals auf einer kleineren befinden.
+
