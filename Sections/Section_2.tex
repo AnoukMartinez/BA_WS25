@@ -2,7 +2,45 @@
 \section{Forschungsgrundlage}
 \label{sec:research}
 
-Um zu untersuchen, wem funktionale Programmierung Grundkenntnisse effektiver beibringen könnte als häufiger verwendete Paradigmen, muss zunächst die theoretische Grundlage gelegt werden. In diesem Abschnitt wird Computational Thinking (CT) exakt für die Arbeit definiert und auf vier häufigste Aspekte reduziert. Zudem wird das Lerntypenmodell, das in dieser Arbeit verwendet wird, erläutert. Zum Schluss wird belegt, dass objektorientierte und prozedurale Programmierparadigmen tatsächlich häufiger in Einführungskursen der Informatik verwendet werden als funktionale.
+Um zu untersuchen, wem funktionale Programmierung Grundkenntnisse effektiver beibringen könnte als häufiger verwendete Paradigmen, muss zunächst die theoretische Grundlage gelegt werden.
+Zunächst wird analysiert, ob objektorientierte und prozedurale Programmierparadigmen tatsächlich häufiger in Einführungskursen der Informatik verwendet werden als funktionale. Dies soll eine Grundlage für die Frage schaffen, ob funktionale Programmierung tatsächlich als neuer Ansatz zum Lernen für neue Studierende untersucht werden kann.
+Anschließend wird untersucht, wie das Erlernen von Programmierkenntnissen definiert werden kann, und welche Kompetenzen relevant sind. Dies umfasst nicht nur das Schreiben von Code, sondern auch das Lernen der nötigen Denkweisen. Diese theoretischen Konzepte lassen sich in der Theorie des Computational Thinking (CT) zusammenfassen. Demnach müssen auch die Zusammengänge von CT und den Lerntypen betrachtet werden.
+Dazu wird CT in diesem Abschnitt exakt für die Arbeit definiert und auf vier häufigste Aspekte reduziert. Zudem wird das Lerntypenmodell, das in dieser Arbeit verwendet wird, erläutert. Dieses dient zur Untersuchung der verschiedenen Lernstile der Programmieranfangenden.
+
+\subsection{Aktuelle Lerninhalte an Universitäten und Hochschulen}
+Umfragen unter Entwicklerinnen der letzten Jahre haben gezeigt, dass objektorientierte Sprachen noch immer zu den am meisten verwendeten zählen, sowohl im Berufsleben als auch unter Lernenden \cite{stackoverflow}. Dieser Abschnitt untersucht, ob auch an deutschen Universitäten noch vermehrt objektorientierte Paradigmen gelehrt werden.
+Darauf aufbauend lässt sich bewerten, ob funktionale Programmierung bereits an Hochschulen gelehrt wird, und überhaupt als Alternative in Erwägung gezogen werden kann.
+
+\subsubsection{Übersicht bekannter Paradigmen}
+Um die häufig behandelten Paradigmen untersuchen zu können, müssen zunächst die wichtigsten Kategorien definiert werden. Dazu werden die vier verbreitetsten Paradigmen betrachtet \cite{normak}.
+
+\begin{description}
+    \item[Imperative Programmierung] Abfolge von Kommandos, die den Zustand des Programms inkrementell ändern. Beschreibungen von Aktionen in einer geregelten Abfolge, ähnlich wie bei einer Anleitung oder einem Rezept.
+    \item[Funktionale Programmierung] Orientierung an Funktionen aus mathematischer Sicht. Produzierte Werte sind unveränderlich, und das Programm hat keinen Zustand. Alle Operationen im Programm werden ausschließlich von Funktionen gehandhabt. Die Funktionen sind Objekte erster Klasse und werden wie Daten behandelt.
+    \item[Logische Programmierung] Arbeitet mit Axiomen, Schlussregeln und Abfragen auf Basis gegebener Fakten.
+    % Axiome - Grundlegende Wahrheiten/Annahmen, die nicht bewiesen werden müssen. Schlussregeln - formale Regeln, nach denen aus gegebenen Axiomen/Fakten neue Wahrheiten abgeleitet werden (z.B Menschen sind sterblich. Sokrates ist ein Mensch. --> Sokrates ist sterblich)
+    \item[Objektorientierte Programmierung] Modellierung von echten Objekten im Code. Daten und Funktionen sind in Objekten gekapselt, die durch Klassen organisiert werden. Klassen sind hierarchisch organisiert, etwa durch Vererbung.
+\end{description}
+
+\subsubsection{Untersuchung Curricula}\label{sec:curriculares}
+Um zu untersuchen, wie verbreitet funktionale Programmierung momentan in Hochschulcurricula ist, wurden 121 Informatik-Studiengänge an verschiedenen Universitäten und Hochschulen in Deutschland untersucht\footnote{Eine detaillierte Beschreibung des Vorgehens befindet sich im Anhang der Arbeit unter \nameref{sec:appendix}.}.
+Die Analyse zeigt, dass die Mehrheit der Einführungskurse in der Informatik objektorientierte Programmierparadigmen behandelt\footnote{Der Unterschied der Datensätze "Unspezifisch" und "Keine Infos" wird im Abschnitt \nameref{sec:unspecified_vs_na} näher erläutert.}.
+
+\begin{figure}[H]
+    \centering
+    \input{Figures/Section_2/figCurricula}
+    \caption{Zahl der Programmiersprachen in Einführungskursen der Informatik}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \input{Figures/Section_2/figParadigms}
+    \caption{Zahl der Paradigmen in Einführungskursen der Informatik}
+\end{figure}
+
+Wenn das funktionale Paradigma in den Modulzielen gelistet war, wurde meist nicht spezifiziert, welche Sprache verwendet wird, um das Konzept näherzubringen, oder welche Ziele mit der Verwendung von funktionaler Programmierung speziell verfolgt werden.
+In den meisten Fällen wird an Institutionen Java als Einführung in die Programmierung verwendet, und damit größtenteils imperative und objektorientierte Ansätze.
+Ein funktionaler Ansatz für Programmiereinsteigende ist in Deutschland bislang kaum etabliert.
 
 \subsection{Computational Thinking}
 
@@ -47,8 +85,11 @@ Es wird zudem argumentiert, dass es noch weitere Aspekte gibt, die für CT allge
 Die Arbeit konzentriert sich auf die vier CT Aspekte, die im ersten Abschnitt definiert wurden.
 
 \subsection{Lerntypen}
+Um genau zu definieren, welchen Studierenden FP helfen kann, müssen zunächst konkrete Kategorien für die Typen von Lernenden festgelegt werden. Um zu analysieren, welche Studierenden möglicherweise Vorteile beim Erlernen von Programmierung haben könnten, werden diese Kategorien von Lerntypen im Zusammenhang mit CT und den jeweiligen Paradigmen betrachtet.
+
 Ebenso wie im Feld des CT gibt es für Lerntypen kein allgemein akzeptiertes Modell. Allerdings gibt es einige Theorien, die häufiger, besonders im Kontext der Informatik, angewandt werden. Ein verbreitetes Modell ist hierbei das Felder-Silverman Lerntypenmodell (FSLSM) \cite{felder}. 
 Das FSLSM wurde speziell im Kontext hoher Abbruchraten in Studiengängen der Ingenieurwissenschaften untersucht, wird allerdings auch vermehrt als Grundlage für Studien im Feld der Informatik verwendet \cite{kumar}.
+Um die Lerntypen in der Forschungsgrundlage zu definieren, wird sich an diesem Lerntypenmodell orientiert.
 
 \subsubsection{Differenzierung im Vergleich zu anderen Modellen}
 Das FSLSM versteht sich nicht als völlig neues oder umfassendes Modell, und basiert auf bereits existierenden Modellen von etwa Jung \cite{jung}, Kolb \cite{kolb} und Briggs \cite{myers}.
@@ -64,39 +105,3 @@ Das FSLSM beschreibt vier verschiedene Bereiche, in denen sich die Lernstile gr�
     \item[Aktiv und Reflexiv]  Dieser Aspekt beschäftigt sich mit der Verarbeitung von Informationen zum Wissen. Aktive Typen sind demnach besser darin, ihr Wissen direkt in der Anwendung zu vertiefen. Sie präferieren Gruppenarbeiten, in denen sie sich aktiv einbringen können, und lernen mit herkömmlichen Vorlesungsstilen nicht so effektiv. Reflexive Typen hingegen benötigen Zeit, um sich eigenständig mit Inhalten auseinanderzusetzen. Sie ziehen es vor, alleine zu arbeiten, und zuerst alle Fakten durchzudenken, bevor sie ein Problem angehen können.
     \item[Sequenziell und Global] Dieser Aspekt beschäftigt sich mit damit, wie Lernende Zusammenhänge verstehen. Sequenzielle Typen können besser in einer festgelegten logischen Reihenfolge arbeiten, etwa chronologisch, mit einem Buch oder mit den Inhalten einer Vorlesung. Globale Typen hingegen lernen oft sprunghaft und nicht linear, und müssen zunächst eine große Menge an Informationen ansammeln, bevor sich für sie das Gesamtbild erschließt. Da viele herkömmliche Vorlesungsformen auf einer schrittweisen Einführung der Konzepte basieren, haben globale Typen beim Erlernen neuer Sachinhalte normalerweise einen Nachteil gegenüber sequenziellen Lerntypen.
 \end{description}
-
-\subsection{Aktuelle Lerninhalte an Universitäten und Hochschulen}
-Obwohl es immer mehr Studierende in der Informatik gibt \cite{destatis}, sind die Abbruchquoten in Deutschland dennoch immer noch vergleichsweise hoch \cite{dhzw}. Um die Frage zu beantworten, ob funktionale Programmierung Einsteiger besser unterstützen kann, muss zunächst betrachtet werden, welche Lerninhalte aktuell in der Informatik an deutschen Hochschulen vermittelt werden.
-Umfragen unter Entwicklerinnen der letzten Jahre haben gezeigt, dass objektorientierte Sprachen noch immer zu den am meisten verwendeten zählen, sowohl im Berufsleben als auch unter Lernenden \cite{stackoverflow}. Dieser Abschnitt untersucht, ob auch an deutschen Universitäten noch vermehrt objektorientierte Paradigmen gelehrt werden.
-Darauf aufbauend lässt sich bewerten, ob funktionale Programmierung bereits an Hochschulen gelehrt wird, und überhaupt als Alternative in Erwägung gezogen werden kann.
-
-\subsubsection{Übersicht bekannter Paradigmen}
-Um die häufig behandelten Paradigmen untersuchen zu können, müssen zunächst die wichtigsten Kategorien definiert werden. Dazu werden die vier verbreitetsten Paradigmen betrachtet \cite{normak}.
-
-\begin{description}
-    \item[Imperative Programmierung] Abfolge von Kommandos, die den Zustand des Programms inkrementell ändern. Beschreibungen von Aktionen in einer geregelten Abfolge, ähnlich wie bei einer Anleitung oder einem Rezept.
-    \item[Funktionale Programmierung] Orientierung an Funktionen aus mathematischer Sicht. Produzierte Werte sind unveränderlich, und das Programm hat keinen Zustand. Alle Operationen im Programm werden ausschließlich von Funktionen gehandhabt. Die Funktionen sind Objekte erster Klasse und werden wie Daten behandelt.
-    \item[Logische Programmierung] Arbeitet mit Axiomen, Schlussregeln und Abfragen auf Basis gegebener Fakten.
-    % Axiome - Grundlegende Wahrheiten/Annahmen, die nicht bewiesen werden müssen. Schlussregeln - formale Regeln, nach denen aus gegebenen Axiomen/Fakten neue Wahrheiten abgeleitet werden (z.B Menschen sind sterblich. Sokrates ist ein Mensch. --> Sokrates ist sterblich)
-    \item[Objektorientierte Programmierung] Modellierung von echten Objekten im Code. Daten und Funktionen sind in Objekten gekapselt, die durch Klassen organisiert werden. Klassen sind hierarchisch organisiert, etwa durch Vererbung.
-\end{description}
-
-\subsubsection{Untersuchung Curricula}\label{sec:curriculares}
-Um zu untersuchen, wie verbreitet funktionale Programmierung momentan in Hochschulcurricula ist, wurden 121 Informatik-Studiengänge an verschiedenen Universitäten und Hochschulen in Deutschland untersucht\footnote{Eine detaillierte Beschreibung des Vorgehens befindet sich im Anhang der Arbeit unter \nameref{sec:appendix}.}.
-Die Analyse zeigt, dass die Mehrheit der Einführungskurse in der Informatik objektorientierte Programmierparadigmen behandelt\footnote{Der Unterschied der Datensätze "Unspezifisch" und "Keine Infos" wird im Abschnitt \nameref{sec:unspecified_vs_na} näher erläutert.}.
-
-\begin{figure}[H]
-    \centering
-    \input{Figures/Section_2/figCurricula}
-    \caption{Zahl der Programmiersprachen in Einführungskursen der Informatik}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \input{Figures/Section_2/figParadigms}
-    \caption{Zahl der Paradigmen in Einführungskursen der Informatik}
-\end{figure}
-
-Wenn das funktionale Paradigma in den Modulzielen gelistet war, wurde meist nicht spezifiziert, welche Sprache verwendet wird, um das Konzept näherzubringen, oder welche Ziele mit der Verwendung von funktionaler Programmierung speziell verfolgt werden.
-In den meisten Fällen wird an Institutionen Java als Einführung in die Programmierung verwendet, und damit größtenteils imperative und objektorientierte Ansätze.
-Ein funktionaler Ansatz für Programmieranfänger ist in Deutschland bislang kaum etabliert.
