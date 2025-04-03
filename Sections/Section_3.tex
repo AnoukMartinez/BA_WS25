@@ -8,11 +8,11 @@ Hierbei wird Objektorientierung (OO) mit funktionaler Programmierung (FP) vergli
 Abschließend wird untersucht, welche Rolle die CT Aspekte in den unterschiedlichen Paradigmen spielen, um zu bestimmen, ob ein Paradigma besondere Vor- und Nachteile aufweist.
 
 % Disclaimer
-Es werden hierbei vermehrt Annahmen zu den Vorlieben der Lerntypen gemacht, aufgrund der Empfehlungen von Felder und Silvermann in Relation zu den Merkmalen der Paradigmen. Aufgrund der zeitlichen Beschränkung der Arbeit können diese Annahmen nicht empirisch überprüft werden.
+Es werden hierbei vermehrt Annahmen zu den Vorlieben der Lerntypen gemacht, aufgrund der Empfehlungen von Felder und Silvermann in Relation zu den Merkmalen der Paradigmen. Aufgrund der zeitlichen Beschränkung der Arbeit können diese Annahmen nicht empirisch überprüft werden (siehe \nameref{sec:similar_srcs}).
 
 \subsection{Lerntypen im Zusammenhang mit Computational Thinking}
 Das Erlernen von Programmierkenntnissen umfasst nicht nur das Schreiben von Code, sondern auch den Erwerb von CT Kompetenzen.
-Nicht jede Lerntypendimension zeigt Vor- oder Nachteile beim Lernen der CT Aspekte, allerdings lassen sich einige klare Zusammenhänge herausstellen.
+Nicht jede Lerntypendimension zeigt Vor- oder Nachteile beim Lernen der CT Aspekte, allerdings lassen sich einige klare Zusammenhänge herausstellen. Es wurde zudem eine Studie betrachtet, die den Zusammenhang der von Felder und Silverman definierten Lerndimensionen speziell im Kontext des Erlernens von CT Aspekten untersucht \cite{chen}.
 
 \subsubsection{Verbal Visuell}
 Visuelle Typen können einen Vorteil beim Erlernen von Abstraktion haben, da grafische Darstellungen eine sehr geeignete und beliebte Form sind, um das Konzept von Abstraktion zu erklären. Beispielsweise in der Objektorientierung werden hierbei öfters Bilder von Objekten wie Tieren oder Fahrzeugen verwendet, die dann auf Codeblöcke abstrahiert werden.
@@ -21,9 +21,10 @@ Zudem können visuelle Lerntypen bei der Dekomposition möglicherweise einen Vor
 
 \subsubsection{Reflexiv Aktiv}
 Reflexive Typen könnten einen klaren Vorteil im Aspekt Debugging haben. Sie sind eher dazu veranlagt, ihre gefundenen Lösungen zu evaluieren und zu hinterfragen. Aktive Typen hingegen sind risikobereiter und sind in ihrer Arbeit experimentierfreudiger. Ihr Ansatz ist es eher, schnell zu scheitern, aber auch schneller neue Lösungen auszuprobieren.
+Reflexive Typen haben zudem noch einen Vorteil im algorithmischen Denken, da diese Probleme oft eigenständig und ohne Diskussion mit Anderen lösen können \cite{chen}.
 
 \subsubsection{Sensorisch Intuitiv}
-Intuitive Typen haben einen klaren Vorteil in der Abstraktion \cite{felderhandout}. Dies ist der Fall unter anderem, da sie sich eher mit Konzepten statt Auswendiglernen beschäftigen. Sie haben oft Schwierigkeiten in Kursen, die stark auf Formelanwendung und Wiederholung setzen, und bevorzugen stattdessen neue Theorien und Interpretationen.
+Intuitive Typen haben einen klaren Vorteil in der Abstraktion, und demnach ebenfalls in der Mustererkennung \cite{felderhandout}. Dies ist der Fall unter anderem, da sie sich eher mit Konzepten statt Auswendiglernen beschäftigen. Sie haben oft Schwierigkeiten in Kursen, die stark auf Formelanwendung und Wiederholung setzen, und bevorzugen stattdessen neue Theorien und Interpretationen. Dies kann ebenfalls durch einen praktischen Versuch bestätigt werden, in dem Vor- und Nachteile der Lerntypen hinsichtlich der CT Aspekte untersucht wurden \cite{chen}.
 Auch im algorithmischen Denken werden Personen mit einem Hang zu intuitivem Lernen einen Vorteil haben, da sie normalerweise Konzepte schneller lernen als sensorische Typen. Sie ziehen Innovation den etablierten Methoden vor und meiden eher Repetition. Dies könnte im Aspekt des algorithmischen Denkens von Vorteil sein, um neue Ansätze für Probleme zu entwickeln. Besonders im Zusammenhang mit dem Aspekt des Debugging könnte diese Innovation zu schnelleren und effizienteren Lösungen führen.
 
 \subsubsection{Sequenziell Global}
@@ -88,7 +89,8 @@ Außerdem könnten sequenzielle Lerntypen einen zusätzlichen Vorteil in der FP 
 Da FP keine veränderlichen Werte und Zustände hat, gibt es zudem keine herkömmlichen Schleifen. Stattdessen erfolgt das wiederholte Ausführen einer Funktion über Rekursion, was ein Umdenken in der Problemlösung erfordert.
 
 \subsubsection{Debugging}
-In der OO gibt es häufiger ein "klassisches" Debuggen. Klassen können diesen Prozess möglicherweise unübersichtlicher machen als in der FP. FP hingegen setzt stark auf Fehlervermeidung, indem Funktionen keine Seiteneffekte haben und deterministisch sind. Durch die eindeutige Verantwortung jeder Funktion treten weniger Flüchtigkeitsfehler oder unbeabsichtigte Seiteneffekte auf. Statt klassischem Debugging ist eine ständige Reflexion essenziell, und Fehler in der Funktionskomposition und in der Datenflusslogik finden.
+In der OO gibt es häufiger ein "klassisches" Debuggen. Klassen können diesen Prozess möglicherweise unübersichtlicher machen als in der FP. FP hingegen setzt stark auf Fehlervermeidung, indem Funktionen keine Seiteneffekte haben und deterministisch sind. Durch die eindeutige Verantwortung jeder Funktion treten weniger Flüchtigkeitsfehler oder unbeabsichtigte Seiteneffekte auf.
+Während FP tendenziell weniger Bugs durch Seiteneffekte produziert, erfordert das Debuggen trotzdem mehr Reflexion, weil die Fehlerquellen oft in der Funktionskomposition und Typensystemen liegen.
 Es zeigt sich daher, dass funktionale Programmiersprachen wie Clojure, Scala und Haskell tendenziell weniger nachträgliche Bugfixes in Relation zu anderen Commit Typen haben, als vergleichbare objektorientierte Sprachen wie Java oder C++.
 
 \begin{figure}[H]
@@ -124,7 +126,7 @@ Insbesondere folgende Lerntypen werden demnach Vorteile haben, wenn sie ihren Pr
 
 \begin{description}
     \item[Visuell] Da durch einen Vorteil in der Abstraktion ein direkter Bezug zu FP im Zusammenhang mit mathematischen Formeln gemacht werden kann. Ein weiterer Vorteil in der Dekomposition kann sowohl visuellen als auch verbalen Lerntypen zugeordnet werden, abhängig von den in der Vorlesung verwendeten Darstellungsformen.
-    \item[Reflexiv] Da Programmierung tendenziell eher in Einzelarbeit erfolgt, und der Lerntyp in herkömmlichen Vorlesungsstilen besser unterstützt wird. Zudem profitiert der reflexive Typ stark durch die Fehlervermeidungsstrategie von FP. Durch ständige Reflexion der Teillösungen können potenzielle Fehler früh erkannt werden. Der Vorteil im Debugging bietet reflexiven Lerntypen einen entscheidenden Vorteil bei der Anwendung von FP.
+    \item[Reflexiv] Da Programmierung tendenziell eher in Einzelarbeit erfolgt, und der Lerntyp in herkömmlichen Vorlesungsstilen besser unterstützt wird. Der reflexive Typ profitiert stark durch die Fehlervermeidungsstrategie von FP. Durch ständige Reflexion der Teillösungen können potenzielle Fehler früh erkannt werden. Der Vorteil im Debugging bietet reflexiven Lerntypen einen entscheidenden Vorteil bei der Anwendung von FP. Zudem hat der reflexive Typ einen Vorteil in der effektiven Findung von Lösungen durch algorithmisches Denken.
     \item[Intuitiv] Da dieser Typ in der FP einen besonderen Vorteil in der Abstraktion hat, die in der FP essenziell ist, da die meisten funktionalen Programmiersprachen auf dem Lambda-Kalkül basieren. Da Innovation bei neuen Algorithmen wichtig in der FP ist, hat dieser Typ auch hier einen Vorteil. Zudem kann eine intuitive Lernweise das natürliche Anwenden von Rekursion in der Lösungsstrategie begünstigen, da eine Ausprägung der intuitiven Lerndimension das Anwenden innovativer Algorithmen unterstützen kann.
     \item[Sequenziell] Da FP einen eher sequenziell veranlagten Entwicklungsstil hat, in dem ein Teilproblem nach dem anderen angegangen wird. Zudem kann eine sequenzielle Veranlagung zusätzlich bei der Anwendung von Dekomposition helfen, um die einzelnen Teile der Problematik nacheinander zu betrachten.
 \end{description}
@@ -137,7 +139,7 @@ Andererseits haben im Umkehrschluss zum vorherigen Abschnitt wiederum folgende L
 
 \begin{description}
     \item[Verbal] Da verbal schwieriger ein Bezug zu den mathematischen Grundlagen von FP gemacht werden kann. Ob ein verbaler oder ein visueller Typ in der Dekomposition eher im Nachteil ist, ist jedoch wie bereits erwähnt größtenteils abhängig davon, welche Darstellungsformen in der Vorlesung verwendet werden.
-    \item[Aktiv] Da die Programmierung allgemein reflexive Typen bevorzugt. Zudem widerspricht ein aktiver Stil der Fehlervermeidung in FP, da diese eine ausführliche Reflexion der Arbeitsschritte erfordert.
+    \item[Aktiv] Da die Programmierung allgemein reflexive Typen bevorzugt. Ein aktiver Stil widerspricht der Fehlervermeidung in FP, da diese eine ausführliche Reflexion der Arbeitsschritte erfordert. Zudem hat ein aktiver Typ Nachteile in der Findung von Lösungen durch algorithmisches Denken. Informationen können durch aktives Arbeiten und Diskussion besser verarbeitet werden und brauchen so mehr Zeit, um richtig entwickelt zu werden. 
     \item[Sensorisch] Da nicht so ein guter Bezug zu echten Problemen hergestellt werden kann. Zudem hat ein sensorischer Typ eher Nachteile beim Erlernen von Abstraktion und beim innovativen Ausarbeiten von neuen Lösungen für Probleme. Das Anwenden etablierter Methoden ist besonders beim Erlernen von FP schwieriger, da sich das Paradigma von anderen Programmierstilen stark unterscheidet.
     \item[Global] Da eher ein sequenzielles Denken gefordert ist. In der OO ist ein globales Denken von Vorteil, da der Zusammenhang zwischen den Domänen eine Rolle spielt und ein Verständnis der gesamten Architektur nötig ist. In der FP allerdings werden die Probleme eher schrittweise angegangen, was für diesen Lerntypen ein Nachteil sein könnte.
 \end{description}
